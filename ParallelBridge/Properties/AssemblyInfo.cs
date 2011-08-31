@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("mono.paralell")]
+[assembly: AssemblyTitle("ParallelBridge")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Ultra Electronics, ProLogic")]
-[assembly: AssemblyProduct("mono.paralell")]
-[assembly: AssemblyCopyright("Copyright © Ultra Electronics, ProLogic 2011")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ParallelBridge")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
