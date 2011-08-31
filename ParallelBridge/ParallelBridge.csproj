@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0FA4F2C-D7D6-4613-834E-22A6708199B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mono</RootNamespace>
+    <AssemblyName>mono.paralell</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/mono.paralell/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ParallelBridge.snk.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LinqBridge">
+      <HintPath>..\lib\LinqBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action.cs" />
+    <Compile Include="Collections.Concurrent.Partitioners\EnumerablePartitioner.cs" />
+    <Compile Include="Collections.Concurrent.Partitioners\ListPartitioner.cs" />
+    <Compile Include="Collections.Concurrent.Partitioners\UserRangePartitioner.cs" />
+    <Compile Include="Collections.Concurrent\ConcurrentDictionary.cs" />
+    <Compile Include="Collections.Concurrent\ConcurrentOrderedList.cs" />
+    <Compile Include="Collections.Concurrent\ConcurrentQueue.cs" />
+    <Compile Include="Collections.Concurrent\ConcurrentStack.cs" />
+    <Compile Include="Collections.Concurrent\IProducerConsumerCollection.cs" />
+    <Compile Include="Collections.Concurrent\ObjectPool.cs" />
+    <Compile Include="Collections.Concurrent\OrderablePartitioner.cs" />
+    <Compile Include="Collections.Concurrent\Partitioner.cs" />
+    <Compile Include="Collections.Concurrent\SplitOrderedList.cs" />
+    <Compile Include="Collections.Generic\CollectionDebuggerView.cs" />
+    <Compile Include="AggregateException.cs" />
+    <Compile Include="Collections\IStructuralComparable.cs" />
+    <Compile Include="Collections\IStructuralEquatable.cs" />
+    <Compile Include="Funcs.cs" />
+    <Compile Include="OperationCanceledException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading.Tasks\CyclicDeque.cs" />
+    <Compile Include="Threading.Tasks\IConcurrentDeque.cs" />
+    <Compile Include="Threading.Tasks\IScheduler.cs" />
+    <Compile Include="Threading.Tasks\Parallel.cs" />
+    <Compile Include="Threading.Tasks\ParallelLoopResult.cs" />
+    <Compile Include="Threading.Tasks\ParallelLoopState.cs" />
+    <Compile Include="Threading.Tasks\ParallelOptions.cs" />
+    <Compile Include="Threading.Tasks\PopResult.cs" />
+    <Compile Include="Threading.Tasks\SchedulerProxy.cs" />
+    <Compile Include="Threading.Tasks\SimpleConcurrentBag.cs" />
+    <Compile Include="Threading.Tasks\SynchronizationContextScheduler.cs" />
+    <Compile Include="Threading.Tasks\Task.cs" />
+    <Compile Include="Threading.Tasks\TaskCanceledException.cs" />
+    <Compile Include="Threading.Tasks\TaskCompletionSource.cs" />
+    <Compile Include="Threading.Tasks\TaskContinuationOptions.cs" />
+    <Compile Include="Threading.Tasks\TaskCreationOptions.cs" />
+    <Compile Include="Threading.Tasks\TaskFactory.cs" />
+    <Compile Include="Threading.Tasks\TaskFactory_T.cs" />
+    <Compile Include="Threading.Tasks\TaskScheduler.cs" />
+    <Compile Include="Threading.Tasks\TaskSchedulerException.cs" />
+    <Compile Include="Threading.Tasks\TaskStatus.cs" />
+    <Compile Include="Threading.Tasks\Task_T.cs" />
+    <Compile Include="Threading.Tasks\TpScheduler.cs" />
+    <Compile Include="Threading.Tasks\UnobservedTaskExceptionEventArgs.cs" />
+    <Compile Include="Threading\AtomicBoolean.cs" />
+    <Compile Include="Threading\CancellationToken.cs" />
+    <Compile Include="Threading\CancellationTokenRegistration.cs" />
+    <Compile Include="Threading\CancellationTokenSource.cs" />
+    <Compile Include="Threading\CountdownEvent.cs" />
+    <Compile Include="Threading\LazyInitializer.cs" />
+    <Compile Include="Threading\LockRecursionException.cs" />
+    <Compile Include="Threading\ManualResetEventSlim.cs" />
+    <Compile Include="Threading\SpinLock.cs" />
+    <Compile Include="Threading\SpinWait.cs" />
+    <Compile Include="Threading\Watch.cs" />
+    <Compile Include="Tuple.cs" />
+    <Compile Include="Tuples.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ParallelBridge.snk.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
